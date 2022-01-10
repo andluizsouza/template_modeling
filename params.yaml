@@ -11,3 +11,4 @@ processed_data_config:
 modeling_config:
   mode: classification
   exp_name: train_default
+  model_dir: models/

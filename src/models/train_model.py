@@ -14,7 +14,7 @@ def read_params(config_path):
     return config
 
 
-def class_model(train_data_path, target, exp_name):
+def class_model(train_data_path, target, exp_name, model_dir):
 
     from pycaret.classification import setup, compare_models, save_model
 
@@ -24,7 +24,7 @@ def class_model(train_data_path, target, exp_name):
                         log_plots=True, log_profile=True, log_data=True)
 
     best_model = compare_models(n_select=1)
-    save_model(best_model, exp_name)
+    save_model(best_model, model_dir+exp_name)
 
     return
 
@@ -42,9 +42,10 @@ def training(config_path):
 
     mode = config["modeling_config"]["mode"]
     exp_name = config["modeling_config"]["exp_name"]
+    model_dir = config["modeling_config"]["model_dir"]
 
     if mode == 'classification':
-        class_model(train_data_path, target, exp_name)
+        class_model(train_data_path, target, exp_name, model_dir)
     elif mode == 'regression':
         regression_model()
 
