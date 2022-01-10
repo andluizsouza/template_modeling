@@ -1,0 +1,15 @@
+artifact_uri: file:///home/anderson/Documents/Data-Science/Templates/modeling/mlruns/1/3412c5d82dc64a998eea21753dfe444a/artifacts
+end_time: 1641837725563
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+name: ''
+run_id: 3412c5d82dc64a998eea21753dfe444a
+run_uuid: 3412c5d82dc64a998eea21753dfe444a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1641837725526
+status: 3
+tags: []
+user_id: anderson
