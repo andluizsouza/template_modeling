@@ -1,7 +1,4 @@
-template_modeling
-==============================
-
-MLOps template for modeling
+# **MLOps template for modeling**
 
 Project Organization
 ------------
