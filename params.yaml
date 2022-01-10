@@ -1,0 +1,13 @@
+external_data_config:
+  external_data_csv: data/external/train.csv
+
+raw_data_config:
+  raw_data_csv: data/raw/train.csv
+
+processed_data_config:
+  train_data_csv: data/raw/train.csv
+  target: churn
+
+modeling_config:
+  mode: classification
+  exp_name: train_default

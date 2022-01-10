@@ -1,7 +1,7 @@
 import yaml
 import argparse
-import numpy as np
-import pandas as pd 
+import pandas as pd
+
 
 def read_params(config_path):
     """
@@ -12,6 +12,7 @@ def read_params(config_path):
     with open(config_path) as yaml_file:
         config = yaml.safe_load(yaml_file)
     return config
+
 
 def prep_data(data_path):
     """
@@ -27,6 +28,7 @@ def prep_data(data_path):
     
     return df
 
+
 def load_data(config_path):
     """
     load data from external/original location (data/external) to the raw folder (data/raw)  
@@ -40,7 +42,8 @@ def load_data(config_path):
     
     df = prep_data(external_data_path)
     df.to_csv(raw_data_path, index=False)
-    
+
+
 if __name__ == "__main__":
     args = argparse.ArgumentParser()
     args.add_argument("--config", default="params.yaml")
